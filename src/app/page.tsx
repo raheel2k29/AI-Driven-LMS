@@ -91,30 +91,11 @@ export default function Home() {
           {/* Dashboard Preview Mockup */}
           <motion.div 
             initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.3 }}
-            className="mt-24 w-full max-w-[1200px] px-6 relative z-10"
+            className="mt-24 w-full max-w-[1200px] px-6 relative z-10 group"
           >
-            <div className="relative aspect-[16/9] rounded-2xl md:rounded-[32px] border border-border/50 bg-card/40 shadow-2xl overflow-hidden backdrop-blur-xl ring-1 ring-white/10">
-              <div className="absolute top-0 w-full h-12 bg-muted/30 border-b border-border/50 flex items-center px-4 gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-                <div className="ml-4 w-64 h-6 bg-background/50 rounded-md border border-border/50"></div>
-              </div>
-              <div className="absolute top-12 bottom-0 left-0 w-64 bg-card/30 border-r border-border/50 hidden md:flex flex-col p-4 gap-2">
-                {[1,2,3,4,5].map(i => (
-                  <div key={i} className="h-8 rounded-md bg-muted/40 w-full animate-pulse" style={{ animationDelay: `${i * 100}ms` }}></div>
-                ))}
-              </div>
-              <div className="absolute top-12 bottom-0 left-0 md:left-64 right-0 p-8 flex flex-col gap-6">
-                <div className="h-12 w-64 bg-muted/40 rounded-xl animate-pulse"></div>
-                <div className="flex gap-6">
-                  <div className="h-32 w-1/4 bg-primary/10 rounded-2xl border border-primary/20"></div>
-                  <div className="h-32 w-1/4 bg-blue-500/10 rounded-2xl border border-blue-500/20"></div>
-                  <div className="h-32 w-1/4 bg-purple-500/10 rounded-2xl border border-purple-500/20"></div>
-                  <div className="h-32 w-1/4 bg-orange-500/10 rounded-2xl border border-orange-500/20"></div>
-                </div>
-                <div className="flex-1 bg-muted/20 rounded-2xl border border-border/50 mt-4"></div>
-              </div>
+            <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-2xl md:rounded-[32px] border border-border/50 shadow-2xl overflow-hidden ring-1 ring-foreground/5 transition-all duration-700 group-hover:scale-[1.02] group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] bg-background">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/hero-mockup.jpg" alt="Aura Dashboard Mockup" className="w-full h-full object-cover object-top" />
             </div>
           </motion.div>
         </section>
